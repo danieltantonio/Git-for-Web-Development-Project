@@ -1,0 +1,121 @@
+<!-- Questions to Submit in today's file first-lastname.txt -->
+<!--
+Copy the questions below into the first-lastname.txt file on your github repo - answer each question and then push your changes.
+CODEPEN: https://codepen.io/danieltomantonio/full/pogojjE
+
+    1. What is Semantic HTML?
+      - Tells the meaning of it's content to the browser and the developer.
+      ex.) <form>, <table>, and <article> are semantic tags because you already know what the content in those tags will be.
+    2. What is HTML used for?
+      - It is the structure and blueprint to a web page and how it should be rendered.
+    3. What is an attribute and where do we put it?
+      - An attribute is additional information about an element. We place attributes within the opening tag.
+    4. What is the h1 tag used for? How many times should I use it on a page?
+      - An <h1> tag is used for a header on a webpage. Specifically it is the most important header and should only be used once.
+    5. Name two tags that have required attributes
+      - <img> and <a> tags both need attributes. <img> needs a source to display the image and <a> needs a href to know where to go once clicked.
+    6. What do we put in the head of our HTML document?
+      - <link>, <title>, <script>, <meta> and other tags that can affect the webpage that doesn't need to be seen by the user. It is used to implement meta data.
+    7. What is an id?
+      - A defining attribute used to uniquely name a specific HTML element.
+    8. What elements can I add an id to?
+      - All of them.
+    9. How many times can I use the same id on a page?
+      - Once.
+    10. What is a class?
+      - A defining attribute used to name an HTML element. The same class name can be used on multiple elements.
+    11. What elements can I add a class to?
+      - All of them.
+    12. How many times can I use the same class on a page?
+      - Multiple times.
+    13. How do I get my link to open in a new tab?
+      - Giving it a target attribute and making it equal to "_blank";
+    14. What is the alt attribute in the image tag used for?
+      - It is used for alternative text incase the image cannot be displayed. The alt text is good for either a slow connection, an error in the src attribute, or if the user uses a screen reader.
+    15. How do I reference an id?
+      - #id;
+    16. What is the difference between a section and a div
+      - <section>: Semantic.
+      - <div>: Non-Semantic.
+    17. What is CSS used for?
+      - Styling a webpage.
+    18. How to we select an element? Example - every h2 on the page
+      - h2 { }
+    19. What is the difference between a class and an id? - Give me an example of when I might use each one
+      - id: Is used for a unique HTML element on your webpage. Can only be used once and can be selected through CSS by using a "#" before the name of the id.
+        --example when to use: You have multiple divs within a section but there is one div that needs to be styled differently.
+
+      - class: Is used for one or more HTML elements on your webpage that can be categorized with one another. Can be selected through CSS by using "." before the name of the class.
+        --example when to use: You have multiple divs that need to be styled the same.
+    20. How do we select classes in CSS?
+      - .classNameHere { }
+    21. How do we select a p element with a single class of “human””?
+      - .human { }
+    22. What is a parent child selector? When would this be useful?
+      - Is used to select one or more specified elements that contains a specific parent.
+        --example: You want to style all the <p> tags within the <div> tags but don't want to style the <p> tags that aren't in a <div>.
+    23. How do you select all links within a div with the class of sidebar?
+      - div > .sidebar { }
+    24. What is a pseudo selector?
+      - A selector that defines a special state of an element.
+    25. What do we use the change the spacing between lines?
+      - line-height
+    26. What do we use to change the spacing between letters?
+      - letter-spacing
+    27. What do we use to to change everything to CAPITALS? lowercase? Capitalize?
+      - text-transform: uppercase;
+      - text-transform: lowercase;
+      - text-transform: capitalize:
+    28. How do I add a 1px border around my div that is dotted and black?
+      - div { border: 1px dotted black; }
+    29. How do I select everything on the page?
+      - * { }
+    30. How do I write a comment in CSS?
+      - // or /* */
+    31. How do I find out what file I am in, when I am using the command line?
+      - pwd
+    32. Using the command line - how do I see a list of files/folders in my current folder?
+      - ls
+    33. How do I remove a file via the command line? Why do I have to be careful with this?
+      - rm
+    34. Why should I use version control?
+      - To either save or back up to a relevant change in your project.
+    35. How often should I commit to github?
+      - Often.
+    36. What is the command we would use to push our repo up to github?
+      - git push -u origin
+    37. Walk me through Lambda's git flow.
+      - Students will create OWN version of Repo(Fork)
+      - Students will add TL as collaborator
+      - Students will then create a branch (on which the student will implement the project) git checkout -b 'firstname-lastname'
+      - Student will then submit their PR into the new branch.
+        --Student will use their own student fork as the base (compare across fork).
+        --Student will add their TL as a review on the PR
+      - TL then will count the HW as done by merging the HW back into master "STUDENT FORK".
+Stretch Questions
+
+    1. What is the difference between an inline element and a block element?
+      - Inline elements use up as much space within a line as possible before breaking into another line of space.
+      - Block elements take up the whole line of space for itself.
+    2. What happens when an element is positioned absolutely?
+      - The element will stay relative to where it was originally located but the elements around it will act as though nothing is there.
+    3. How do I make an element take up only the amount of space it needs but also have the ability to give it a width?
+      - display: inline-block;
+    4. Name 3 elements that are diplay block by default, 2 elements that are display inline by default and 1 element that is display inline-block by default
+      - block: <p>, <div>, <nav>
+      - inline: <a>, <img>
+      - inline-block: <button>
+    5. In your own words, explain the box model. What is the "fix" for the box model, in other words, how do we make all elements respect the width we've given them?
+      - Almost every HTML element is considered a box. And each box has layers starting with the content.
+        The layers go from inwards to outwards as followed:
+        -- Content (your picture, text, textbox, etc. The centered box.)
+        -- Padding (the space between your content and the border. The box just outside of your content.)
+        -- Border (the outline of your content. The third layer of the box.)
+        -- Margin (the space outwards of your content, padding, and border. The last box.)
+      - The "border-box" method is considered to be the "fix" to the box model for CSS. The reason why is because let's say you have some content that you've set a
+        width of 200px to, but you also want to add some padding of 50px and a border of 5px. Unfortunately it would add some extra spacing to the width because of
+        the padding and border, thus making it look as if it is 255px even though it is not. The border-box method lets you add padding and a border without messing up
+        the set width.
+
+
+   -->
